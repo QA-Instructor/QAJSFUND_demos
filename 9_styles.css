@@ -1,0 +1,9 @@
+.important {
+    font-weight: bold;
+    color: magenta;
+}
+
+.quote {
+    font-style: italic;
+    color: greenyellow;
+}

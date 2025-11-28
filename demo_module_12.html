@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 12</title>
+</head>
+<body>
+    <h3>Form with Validation</h3>
+    <form id="validSubscribe" action="" method="post">
+        <input type="email" id="emailAddress">
+        <input type="submit" value="Subscribe">
+    </form>
+    <br>
+    <h3>Form without Validation</h3>
+    <form name="nonvalidSubscribe"action="" method="post" novalidate>
+        <input type="email" id="emailAddress">
+        <input type="submit" value="Subscribe">
+    </form>
+    <br>
+    <h3>Form with Radio Buttons</h3>
+    <form name="drinkForm" action="" method="post">
+        <input type="radio" name="drink" value="tea">Tea<br>
+        <input type="radio" name="drink" value="coffee">Coffee<br>
+        <input type="radio" name="drink" value="chocolate" checked>Chocolate<br>
+        <br>
+        <button id="vend">Vend Drink</button>
+        <label id="result"></label>
+    </form>
+ <h3>Form with Select Option</h3>
+    <form name="titleForm" action="" method="post">
+        <select name="title">
+            <option value="Dr">Dr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mr">Mrs</option>
+            <option value="Mr">Mr</option>
+        </select>
+        <label id="lblTitle"></label>
+    </form>
+
+    <script src="12_forms.js"></script>
+    <script src="12_regex.js"></script>
+</body>
+</html>
