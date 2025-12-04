@@ -6,6 +6,7 @@ console.log(formA);
 
 // access the DOM forms collection by id
 let formB = document.forms["validSubscribe"];
+console.log(formB);
 console.log(formB.children[0]); // access zeroth element
 
 // iterate the forms elements
@@ -14,9 +15,10 @@ for (let el of formB.elements){
 }
 
 // access the DOM forms collection by id with a selector method
-let formC = document.getElementById["nonvalidSubscribe"];
-console.log(formB.children[0]); // access zeroth element
-console.log(`id: ${ formB.children[0].id}`); // access first element's name
+let formC = document.getElementById("nonvalidSubscribe");
+console.log(formC);
+console.log(formC.children[0]); // access zeroth element
+console.log(`id: ${ formC.children[0].id}`); // access first element's name
 
 const radios = document.querySelectorAll('input[name="drink"]');
 const result = document.getElementById('result');
@@ -48,7 +50,7 @@ title.addEventListener('change', (e) =>{
 })
 console.log(`Title is: ${title.value}`); // use 'value'
 
-// NOTE: Exercise 12A does not change the url as decsribed in the instructions
+// NOTE: Exercise 12A does not change the url as described in the instructions
 // Instead - you later add some console.log statements to output the field values
 
 

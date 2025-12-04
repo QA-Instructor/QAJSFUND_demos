@@ -1,8 +1,11 @@
 // RegEx
 console.log("REGEX......");
 
+// long-hand syntax
 let re = new RegExp("ab+c");
-let quickRe = /ab+c/g; // add i before g to make it case insensitive
+
+// short-hand regex initialiser syntax
+let quickRe = /ab+c/ig; // add i before g to make it case insensitive
 
 let string = "xyz ABC abc aaaaBcc cccabbbca aabbbbc";
 let isMatch = quickRe.test(string);
@@ -28,7 +31,12 @@ console.log(`Input string: ${matchesB.input}`);
 
 
 let str = 'my little string'; // s means whitespace
-console.log(str.split(/\s/)); //"my, little, string"
+console.log(str.split(/\s/)); // array of "my, little, string"
+
+let strWithNumbers = 'h3llo 3v3ryon3'; // 3 instead of e
+//remove 'g' to see replacement only affects first 'e'
+let stringWithoutNumbers = strWithNumbers.replace(/3/g,'e');
+console.log(stringWithoutNumbers); //"hello everyone"
 
 let someString = 'Hello, World'; 
 someString = someString.replace(/World/, 'Universe'); 
@@ -36,6 +44,7 @@ console.log(someString); // "Hello, Universe"
 
 let jeff = 'JeffreyWay'; 
 // alert(name.match(/e/g)); // alerts "e,e"
+// match return an array of the matches found
 let jeffResult = jeff.match(/e/g); // look for 'e' globally
 console.log(jeffResult);
 

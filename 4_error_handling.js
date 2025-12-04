@@ -9,11 +9,12 @@ console.log(pi.toFixed(100)); // 100 decimal places
 // console.log("Missing close bracket"; // SyntaxError
 
 const foo ={};
+console.log(typeof foo);
 // foo.bar(); // TypeError: foo.bar is not a function
 
 // Handling errors
 try {
-    let x = parseInt(prompt("Enter a number number", ""));
+    let x = parseInt(prompt("Enter a number", ""));
     if (isNaN(x)) {
         let e = new Error();
         e.message = "That wasn't a number";
@@ -23,6 +24,9 @@ try {
 }
 catch (e) {
     console.log(`Something went wrong: ${e.message}`);
+    // console.warn(e);
+    // console.error(e);
+    // console.trace(e);
 }
 finally {
     console.log("Finally block");
@@ -30,7 +34,7 @@ finally {
 }
 
 // console examples
-console.log(`LOG`);
-console.warn(`WARN`);
-console.error(`ERROR`);
-console.trace(`TRACE`);
+// console.log(`LOG`);
+// console.warn(`WARN`);
+// console.error(`ERROR`);
+// console.trace(`TRACE`);

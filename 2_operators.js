@@ -1,5 +1,5 @@
 let x = 0;
-x = x  + 1; //x is now 1
+x = x + 1; //x is now 1
 x += 1; //x is now 2
 x++; //x is now 3
 console.log(x);
@@ -8,7 +8,7 @@ console.log(x);
 
 // short-circuiting
 
-let isAdmin = true;
+let isAdmin = false;
 let password = "secret";
 if (isAdmin && password == "hidden"){
     console.log("Let Admin in");
@@ -64,17 +64,19 @@ let total = t + parseInt(s); //returns 10 not 55
 console.log(total);
 
 // isNan function
-console.log("Is 's' NOT a number: " + isNaN(s));
-console.log("Is 's' a number: " + !isNaN(s));
+console.log("Is 's' a number: " + isNaN(s));
+console.log("Is 's' NOT a number: " + !isNaN(s));
 
-// eval - do NOT use
+// eval - do NOT use - evil
 let xx = 10;
 let yy = 20;
 let text = "xx * yy";
 let result = eval(text);
+console.log(result);
 
 // security risk due to code injection
 // use code or a function instead
 let xxx = 10;
 let yyy = 20;
 let result2 = xxx * yyy;
+console.log(result2);

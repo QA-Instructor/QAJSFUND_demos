@@ -1,7 +1,7 @@
 // if, switch, while, do while, for
 
 // IFs
-let x = 5, y=3;
+let x = 5, y = 3;
 let result = null;
 
 if (x > y){

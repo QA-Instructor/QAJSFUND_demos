@@ -7,7 +7,7 @@ let bgColor2 = document.querySelector("p:nth-of-type(2)").style.backgroundColor;
 console.log(bgColor2);
 
 // Attempt to get the style of the 3rd paragraph
-let bgColorPara3 = document.querySelector("p:nth-of-type(3)").style.backgroundColor;
+let bgColorPara3 = document.querySelector("p:nth-of-type(3)").style.color;
 console.log(bgColorPara3); // element is styled via CSS class so no style is returned
 // Styles applied via classes are not added to the 'style' property
 
@@ -24,7 +24,7 @@ console.log(colorParagraph3); // rgb(238, 130, 238) => violet
 document.querySelector('p:nth-of-type(1)').style.backgroundColor = '#dddddd';
 document.querySelector('p:nth-of-type(1)').style.color = '#666666';
 
-// use Object.assign to make the code less verbose
+// // use Object.assign to make the code less verbose
 let div = document.querySelector('div');
 
 let styles = {

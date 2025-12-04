@@ -2,13 +2,14 @@
 // 1. Create a map by passing an Array to new Map
 const fruits1 = new Map([[1,"bananas"],[2,"grapefruit"],[3,"apples"]]);
 
-// 2. Create a map by passing an Array to new Map
+// 2. Create an empty Map and add items using set() method
 const fruits2 = new Map();
 fruits2.set(1, "bananas");
 fruits2.set(2, "grapefruit");
 fruits2.set(3, "apples");
 
 console.log(fruits1);
+console.log(fruits2);
 console.log(fruits1.size);
 
 // add an item
@@ -60,7 +61,7 @@ for (let [key, value] of fruits2.entries()) {
 // Sets
 
 console.log("SETS.............");
-// stes store unique values
+// sets store unique values
 let mySet = new Set();
 
 mySet.add("apples");
@@ -81,7 +82,7 @@ mySet.add("buses");
 
 // iterating over sets
 console.log("ITERATING over Sets......");
-// log all key/value pairs in the set
+// log all items in the set
 for (let item of mySet) {
     console.log(item);
 }

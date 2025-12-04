@@ -13,6 +13,11 @@ btn2.addEventListener('click', buttonClickHandler);
 let btn4 = document.querySelector('#btn4');
 btn4.addEventListener('click', ()=> {buttonClickHandler()});
 
+// uses an Anonymous Function as an event handler - does create a new context
+// but I can pass in the event object to access the 'target' prop
+let btn5 = document.querySelector('#btn5');
+btn5.addEventListener('click', function(event){buttonClickHandler(event)});
+
 function findQuadrant(event){
     let x = event.x;
     let y = event.y;
@@ -55,7 +60,7 @@ function buttonClickHandler(event){
     }
     catch  {
         console.log(`Button clicked: No event target is is available`);
-        console.log("inline, hard coded event handler");
+        console.log("inline, hard coded event handler or arrow function");
     }
     
     console.log(`"this" refers to: ${this}`);
@@ -68,8 +73,8 @@ function buttonClickHandler(event){
 // an arrow function is a short-hand for writing an anonymous function
 // that does NOT create a new context for 'this'
 
-let btn5 = document.querySelector('#btn5');
-btn5.addEventListener('click', function(event){
+let btn6 = document.querySelector('#btn6');
+btn6.addEventListener('click', function(event){
     console.log(`Button clicked: ${event.target.id}`);
 
     this.disabled = true;
@@ -81,14 +86,29 @@ btn5.addEventListener('click', function(event){
 });
 
 // nested anonymous function
-let btn6 = document.querySelector('#btn6');
-btn6.addEventListener('click', function(event){
+let btn7 = document.querySelector('#btn7');
+btn7.addEventListener('click', function(event){
     console.log(`Button clicked: ${event.target.id}`);
 
     this.disabled = true;
     setTimeout(function() { // anonymous function
         alert("Time's up");
-        this.disabled = false;// this now refers to the WINDOW ( a new context was created) 
+        this.disabled = false;// this now refers to the WINDOW (a new context was created) 
+        // so the button can NOT be re-enabled
+        console.log(`this: ${this}`);
+    }, 1000);
+});
+
+// nested anonymous function attempting to pass in event object
+let btn8 = document.querySelector('#btn8');
+btn8.addEventListener('click', function(event){
+    console.log(`Button clicked: ${event.target.id}`);
+
+    this.disabled = true;
+    setTimeout(function(event) { // event is no longer in contect - anonymous function
+        console.log(event.target);
+        alert("Time's up");
+        event.target.disabled = false;// this now refers to the WINDOW (a new context was created) 
         // so the button can NOT be re-enabled
         console.log(`this: ${this}`);
     }, 1000);

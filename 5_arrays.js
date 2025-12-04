@@ -47,6 +47,7 @@ for (let i = 0; i < classroom.length; i++) {
 // for (let i = 0; i < classroom.length; i++) {
 //     console.log(classroom[i]);
 // }
+
 console.log("ADD name to existing element...");
 classroom[4] = "George";
 for (let i = 0; i < classroom.length; i++) {
@@ -103,7 +104,7 @@ isFreddyInClass ? console.log("Freddy is in class") : console.log("Freddy is abs
 // extra loop types
 console.log("FOR...OF LOOP...");
 for (item of classroom){
-    if (item === "Zippy"){
+    if (item === "Jane"){
         break;
     }
     console.log(item);

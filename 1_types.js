@@ -76,7 +76,7 @@ console.log(f);
 console.log("STRINGS");
 console.log("Strings can use double or single quotes or backticks");
 let text1 = "A string in double quotes";
-let text2 = 'A string in single quotes';
+let text2 = 'A string in single quotes said "BOO!" to another string';
 let text3 = `A string in back ticks`;
 
 console.log(text1);
@@ -106,6 +106,9 @@ console.log(str3); // 5 + 3 = 8
 
 // string functions
 console.log(alright.length);
+
+let alrightLength = alright.length;
+console.log(`The length of the alright string is ${alrightLength}`);
 
 let str = "Hello world, welcome to the universe.";
 let n = str.indexOf("welcome"); 

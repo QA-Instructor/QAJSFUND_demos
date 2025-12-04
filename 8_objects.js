@@ -19,7 +19,7 @@ console.log(student["email"]);
 
 // `for in loop` is used to enumerate over property names of an object
 for (let key in student) {
-    console.log(`${key}:${student[key]}`);
+    console.log(`${key}: ${student[key]}`);
 }
 
 // literal notation for creating objects
@@ -52,8 +52,8 @@ for (let i = 0; i < classroom.length; i++) {
 // my solution
 console.log("QUICK EXERCISE B....");
 
-for (let attendee of classroom){
-    for (let key in attendee)    {
+for (let attendee of classroom){ // enumerate the array with for...of
+    for (let key in attendee)    {//enumerate the object props with for...in
         console.log(`\t${key}: ${attendee[key]}`);
     }
 }
@@ -93,6 +93,7 @@ console.log("DYNAMIC PROPERTY NAMES.........")
 
 
 const dynamicKey = 'age';
+
 const person = {
   name: 'Alice',
   [dynamicKey]: 30  // Dynamic property name
@@ -104,6 +105,7 @@ console.log(person); // Output: { name: 'Alice', age: 30 }
 // complex key generation:
 const prefix = 'user';
 const id = 42;
+
 const user = {
   [`${prefix}_${id}`]: 'John Doe'
 };
@@ -246,7 +248,7 @@ console.log(`i is: ${i} and j is: ${j}`);
 // if variables declared separately
 let k, m;
 // {k, m} = {k: 5, m: 7}; 		//syntax error
-// the braces on the left-hand side denote a vlock so the `=` is unexpected without the `let` keyword
+// the braces on the left-hand side denote a block so the `=` is unexpected without the `let` keyword
 
 ({k, m} = {k: 9, m: 2}); 	// Solution: put brackets around entire block - syntax okay!
 

@@ -7,7 +7,7 @@ const myBike = new Object(); // using new
 myBike.make = "Honda"; 
 myBike.model = "Fireblade";
 
-const myBike2 = {            // using {}
+const myBike2 = {            // using object literal {}
     make: "Honda", 
     model: "Fireblade" 
 };
@@ -17,7 +17,7 @@ const myBike2 = {            // using {}
 
 // access objects
 myBike.make = "Yamaha"; // Dot
-myBike["model"] = "R1"; // Obj Literal
+myBike["model"] = "R1"; // Obj indexer
 
 console.log(myBike.make);
 
@@ -54,7 +54,7 @@ const person = {
 console.log(person.id);
 console.log(person.fullName());
 
-// Classes introduced in 2015 as simpler syntax for creating multipleobjects of the same type
+// Classes introduced in 2015 as simpler syntax for creating multiple objects of the same type
 // and to make inheritance simpler
 
 console.log("OBJECTS from CLASSES.................");
@@ -86,6 +86,22 @@ console.log(myCar.wheels);
 // overriding is creating a new method  with the same name as an inherited method within a subclass
 // use 'extends' to inherit from a class
 // use 'super' to call the base class constructor
+
+console.log("INHERITANCE...");
+import HireCar from './14_hire_car.js'; 
+
+const myHireCar = new HireCar(4, 1, 5);
+console.log(`Constructed wheels: ${myHireCar.wheels}`);
+console.log(`Constructed speed: ${myHireCar.speed}`);
+myHireCar.accelerate(30);
+console.log(`Accelerated speed: ${myHireCar.speed}`);
+console.log(`Constructed lease duration: ${myHireCar.leaseDuration} days`);
+
+myHireCar.leaseDuration = 14;
+console.log(`Changed lease duration: ${myHireCar.leaseDuration} days`);
+
+// private props are accessible but should be avoided
+console.log(myHireCar._leaseDuration);
 
 // an OBJECT CONSTUCTOR FUNCTION is a way of creating multiple objcts of the same type without defining a class
 
@@ -121,3 +137,10 @@ DivisionByZeroError.prototype = new Error();
 // Static class methods are defined on the class itself.
 
 // You cannot call a static method on an object, only on an object class.
+
+// import Triangle from './14_static_triangle.js';
+
+// const myTriangle = new Triangle(10, 12);
+// // call STATIC method of the Triangle class
+
+// console.log(Triangle.area(myTriangle));
