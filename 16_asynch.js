@@ -27,8 +27,8 @@ async function asyncFunc2() {
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
             console.log('Async function 2');
-            resolve();
-            // reject("HELP!!!...I rejected");
+            // resolve();
+            reject("HELP!!!...I rejected");
         },2000);
     });
 }

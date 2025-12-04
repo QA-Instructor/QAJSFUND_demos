@@ -26,7 +26,7 @@ let myPromise = new Promise(function(myResolve, myReject) {
   let x = 0;
 // this would be the code we call that might resolve or reject
 // some code (try to change x to any value other than 0)
-// x++;
+x++;
   if (x == 0) {
     myResolve("Okey dokey");//"Okey dokey" is passed to the resolve function (line 41)
   } else {
