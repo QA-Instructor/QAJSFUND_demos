@@ -73,6 +73,8 @@ console.log(`Car's current speed: ${myCar._speed}`);
 console.log("GETTERS and SETTERS......");
 console.log(myCar.power);
 console.log(myCar.wheels);
+console.log(myCar.speed);
+
 
 console.log("Attempt to give the car 5 wheels");//invalid
 myCar.wheels = 5;
@@ -138,9 +140,11 @@ DivisionByZeroError.prototype = new Error();
 
 // You cannot call a static method on an object, only on an object class.
 
-// import Triangle from './14_static_triangle.js';
+import Triangle from './14_static_triangle.js';
 
-// const myTriangle = new Triangle(10, 12);
-// // call STATIC method of the Triangle class
+const myTriangle = new Triangle(10, 12);
+// call STATIC method of the Triangle class
 
-// console.log(Triangle.area(myTriangle));
+console.log(Triangle.area(myTriangle));
+
+// console.log(myTriangle.area());

@@ -1,9 +1,10 @@
 import Car from './14_car.js';
 
+// a HireCar "is a kind of" Car
 class HireCar extends Car {
-    constructor (wheels, power, leaseDuration) {
+    constructor (wheels, power, leaseDuration = 3) { //3 days as standard
         super(wheels, power); //call parent constructor
-        this._leaseDuration = 3; 	   //3 days as standard
+        this._leaseDuration = leaseDuration; 	  
     }
 
      // getter

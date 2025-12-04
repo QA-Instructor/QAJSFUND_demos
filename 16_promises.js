@@ -20,9 +20,9 @@ function myDisplayer(some) {
 
 let myPromise = new Promise(function(myResolve, myReject) {
     // create a promise that will call some other code
-    // that may tale a while
+    // that may take a while
     // if all is good, pass this data to my resolve function
-    // if something foes wrong, pass this error data to my reject function
+    // if something goes wrong, pass this error data to my reject function
   let x = 0;
 // this would be the code we call that might resolve or reject
 // some code (try to change x to any value other than 0)
@@ -41,11 +41,18 @@ let myPromise = new Promise(function(myResolve, myReject) {
 //   function(error) { /* code if some error */ }
 // );
 
+//// 'then': attaches callbacks for the resolution or rejection of the promise
 myPromise.then(
   function(value) {myDisplayer(value);},
   function(error) {myDisplayer(error);}
 );
 
-// The Fetch API os an interface for asynchronously calling network resources
+
+// what happens if I don't define a callback for the rejected status
+// myPromise.then(
+//   function(value) {myDisplayer(value);}
+// );
+
+// The Fetch API is an interface for asynchronously calling network resources
 // FETCH requests return PROMISES
 
