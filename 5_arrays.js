@@ -93,13 +93,16 @@ console.log("FIND an element's index...");
 let foundIndex = classroom.findIndex((item)=> item=="Jane");
 console.log(`Item found is at position ${foundIndex}`);
 
-console.log("FILL an array...");
+console.log("FILL an array..."); // fill overrides the specified elements
 let filledArray = numbers.fill('8', 4, 7); // start at position 4 and upto but not including position 7
 console.log(filledArray);
 
 console.log("INCLUDE to check an item exists in an array...");
 let isFreddyInClass = classroom.includes("Freddy");
 isFreddyInClass ? console.log("Freddy is in class") : console.log("Freddy is absent");
+
+// alterntaive ternary syntax
+console.log(isFreddyInClass ? "Freddy is in class" : "Freddy is absent");
 
 // extra loop types
 console.log("FOR...OF LOOP...");

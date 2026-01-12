@@ -18,6 +18,18 @@ else{
 }
 console.log(password);
 
+let count = 1;
+console.log(`count is: ` + count);
+// isAdmin = true;
+password = "hidden";
+if (isAdmin && count++ && password == "hidden"){
+    console.log("Let Admin in");
+}
+else{
+    console.log("You are not the Administrator!");
+}
+console.log(`count is: ` + count);
+
 // type checking
 let a = 2;
 let b = "two";

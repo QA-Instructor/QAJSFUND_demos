@@ -105,7 +105,7 @@ btn8.addEventListener('click', function(event){
     console.log(`Button clicked: ${event.target.id}`);
 
     this.disabled = true;
-    setTimeout(function(event) { // event is no longer in contect - anonymous function
+    setTimeout(function(event) { // event is no longer in context - anonymous function
         console.log(event.target);
         alert("Time's up");
         event.target.disabled = false;// this now refers to the WINDOW (a new context was created) 

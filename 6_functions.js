@@ -25,8 +25,8 @@ outputMessage(`Bonjour le Monde!`);
 // let greetingA = returnAGreetingToSomeone("Charlie");
 // let greetingB = returnAGreetingToSomeone("Devon");
 
-// // console.log(greetingA);
-// // console.log(greetingB.toUpperCase());
+// console.log(greetingA);
+// console.log(greetingB.toUpperCase());
 
 // // Arrow function examples
 // const noArgFnImpRet = () => `Hello World`;		// returns `Hello World` when called
@@ -51,16 +51,16 @@ outputMessage(`Bonjour le Monde!`);
 // let arrowB = multiArgFn(2, 5);
 // console.log(arrowB);
 
-// // Default values
-// function add(arg1, arg2, arg3=5) {
-//     return(arg1 + arg2 + arg3);
-// }
+// Default values
+function add(arg1, arg2, arg3=5) {
+    return(arg1 + arg2 + arg3);
+}
 
-// console.log(add(1, 2, 3)); // 6
-// console.log(add(2, 4)); // 11
+console.log(add(1, 2, 3)); // 6
+console.log(add(2, 4)); // 11
 
-// // rest parameters
-// // the rest / spread property (...) enables the destructuring of an array
+// rest parameters
+// the rest / spread property (...) enables the destructuring of an array
 
 // let arrayA = ["one", "two"];
 // let arrayB = ["three", "four"];
@@ -77,7 +77,8 @@ outputMessage(`Bonjour le Monde!`);
 // console.log(mutiply(5, 1, 2, 5, 10));
 
 // Function SCOPE
-// Example 1
+// // Example 1
+// // if you do not use 'let' the variable has `global` scope
 
 // function testGlobal(){
 //    flag = true;
@@ -96,7 +97,8 @@ outputMessage(`Bonjour le Monde!`);
 // testGlobal();
 // =======================
 
-// Example 2
+// // Example 2
+// // `flag` variable in first func is `global`, `flag` variable in second func uses `let` so is `local`
 
 // function testLet(){
 //    flag = true;
@@ -153,7 +155,7 @@ outputMessage(`Bonjour le Monde!`);
 // function test4() 
 // {
 //    flag = false;// this is seen as a different global variable it is shadowed by the local 
-//    // varibale inside testGlobal4 function
+//    // variable inside testGlobal4 function
 //    return
 // }
 

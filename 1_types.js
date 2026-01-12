@@ -88,11 +88,17 @@ let alright= 'It\'s alright - escape character.';
 console.log(alright);
 
 // could be done as follows:
-let alright2 = "It\'s alright - double quotes.";
+let alright2 = "It\'s alright - double quotes + escape character.";
 console.log(alright2);
 
-let alright3 = `It\'s alright - back ticks.`;
+let alright2b = "It's alright - double quotes.";
+console.log(alright2b);
+
+let alright3 = `It\'s alright - back ticks + escape character.`;
 console.log(alright3);
+
+let alright4 = `It's alright - back ticks no escape character.`;
+console.log(alright4);
 
 // concatenation
 let str1 = "5 + 3 = ";
@@ -117,5 +123,9 @@ console.log(`Position of "welcome" is: ${n}`);
 console.log(str.toUpperCase());
 console.log(str); // original str is unchanged
 
-console.log(str.charAt(6));
-console.log(str.charAt(0));
+const upperMessage = str.toUpperCase();
+console.log(`Original string: ` + str); // original str is unchanged
+console.log(`Returned string: ` + upperMessage); // returned string is uppercase
+
+console.log(`Char at position 6 is: ` + str.charAt(6));
+console.log(`Char at position 0 is: ` +str.charAt(0));

@@ -31,7 +31,7 @@ console.log(greeting);
 
 // short-hand ternary
 let now2 = new Date();
-let greeting2 = "Good" + ((now.getHours() > 17) ? " evening." : " day.");
+let greeting2 = "Good" + ((now2.getHours() > 17) ? " evening." : " day.");
 console.log(greeting2);
 
 // switch

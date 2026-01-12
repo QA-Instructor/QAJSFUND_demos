@@ -1,8 +1,8 @@
-// // Example A
-// // note relative path reference
-// import {area} from "./circle-functions.js";
+// Example A
+// note relative path reference
+import {area} from "./circle-functions.js";
 
-// console.log(area(5)); // 78.53981633974483
+console.log(area(5)); // 78.53981633974483
 
 // // Example B
 // import {area, circumference} from "./circle-functions.js";
@@ -20,20 +20,20 @@
 // console.log(circle.circumference(5));
 
 // // Example D
-import * as circle2 from "./circle-functions-2.js";
+// import * as circle2 from "./circle-functions-2.js";
 
-console.log(`Export / Import many....`);
-console.log(circle2.area(10));
+// console.log(`Export / Import many....`);
+// console.log(circle2.area(10));
 
-// // Example E
-// use default export
-console.log("Default export......");
+// // // Example E
+// // use default export
+// console.log("Default export......");
 
-// // use any meaningful name you like
-import thing from "./circle-functions-2.js";
-import circleThing from "./circle-functions-2.js";
+// // // use any meaningful name you like
+// import thing from "./circle-functions-2.js";
+// import circleThing from "./circle-functions-2.js";
 
-console.log(thing);
-console.log(circleThing);
+// console.log(thing);
+// console.log(circleThing);
 
 

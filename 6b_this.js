@@ -27,13 +27,13 @@ console.log(this === window); // => true
 // let answer = calculate.sum();
 // console.log(answer);
 
-// The solution is to use a function expression or shorthand syntax for
+// The solution is to use a `function expression` or shorthand syntax for
 // method definition (available in ECMAScript 6). In such a case this 
 // is determined by the invocation, but not by the enclosing context. 
 const calculateFixed = {
   array: [1, 2, 3],
   sum() {
-    console.log(`Inside the object's arrow function method`);
+    console.log(`Inside the object's function expression method`);
     console.log(`Is 'this' the 'window' object`);
     console.log(this === window); // => true
     console.log(`'this' does NOT get rebound to the calling object \nso it is still the 'calculate' object \ntherefore the array does exist.`);
@@ -44,7 +44,7 @@ const calculateFixed = {
 console.log(`FIXED.......`);
 console.log(`OUTSIDE - Is 'this' the 'window' object`);
 console.log(this === window); // => true
-// Throws "TypeError: Cannot read property 'reduce' of undefined"
+// Does not throw an error
 let answerFixed = calculateFixed.sum();
 
 console.log(answerFixed);

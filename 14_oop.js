@@ -85,7 +85,7 @@ console.log("Attempt to give the car 3 wheels");//valid
 myCar.wheels = 3;
 console.log(myCar.wheels);
 
-// overriding is creating a new method  with the same name as an inherited method within a subclass
+// overriding is creating a new method with the same name as an inherited method within a subclass
 // use 'extends' to inherit from a class
 // use 'super' to call the base class constructor
 
