@@ -59,8 +59,8 @@ function buttonClickHandler(event){
         info.textContent =`'event.target' is: ${myTarget}`;
     }
     catch  {
-        console.log(`Button clicked: No event target is is available`);
-        console.log("inline, hard coded event handler or arrow function");
+        console.log(`Button clicked: No event target is available`);
+        console.log("Inline, hard coded event handler or arrow function");
     }
     
     console.log(`"this" refers to: ${this}`);

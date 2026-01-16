@@ -32,12 +32,12 @@ let classroom = [
 ]
 
 // use a `for of` loop to iterate the array
-for (attendee of classroom){
+for (let attendee of classroom){
     console.log(attendee);
 }
 
 // use a `for of` loop to iterate the array to fetch their name
-for (attendee of classroom){
+for (let attendee of classroom){
     console.log(attendee.name);
 }
 
@@ -61,11 +61,16 @@ for (let attendee of classroom){ // enumerate the array with for...of
 // Enhanced object literals
 let power = 200;
 
+let herCar = {
+    power: 200
+}
+
 let myCar = {
     power
 }
 
 console.log(myCar);
+console.log(herCar);
 
 let yourCar = {
     // properties
@@ -113,7 +118,7 @@ const user = {
 console.log(user);  // Output: { user_42: 'John Doe' }
 
 let horsePower = 200;
-n = 0;
+let n = 0;
 
 let theirCar = {
     horsePower,

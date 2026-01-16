@@ -19,27 +19,27 @@ console.log(colorParagraph3); // rgb(238, 130, 238) => violet
 // Computed Style is read-only. Use the style property to set CSS values using JS
 // or add CSS classes
 
-// // Setting multiple CSS properties
-// // apply style to para 1 using JS
-// document.querySelector('p:nth-of-type(1)').style.backgroundColor = '#dddddd';
-// document.querySelector('p:nth-of-type(1)').style.color = '#666666';
+// Setting multiple CSS properties
+// apply style to para 1 using JS
+document.querySelector('p:nth-of-type(1)').style.backgroundColor = '#dddddd';
+document.querySelector('p:nth-of-type(1)').style.color = '#666666';
 
-// // // use Object.assign to make the code less verbose
-// let div = document.querySelector('div');
+// // use Object.assign to make the code less verbose
+let div = document.querySelector('div');
 
-// let styles = {
-//     backgroundColor: "pink",
-//     borderRadius: '5px',
-//     boxShadow: "5px 5px 5px deeppink"
-// }
+let styles = {
+    backgroundColor: "pink",
+    borderRadius: '5px',
+    boxShadow: "5px 5px 5px deeppink"
+}
 
-// Object.assign(div.style,styles);
+Object.assign(div.style,styles);
 
-// // Add and remove CSS classes
-// const para3 = document.querySelector('p:nth-of-type(3)');
+// Add and remove CSS classes
+const para3 = document.querySelector('p:nth-of-type(3)');
 
-// para3.classList.remove('fancy');
-// para3.classList.add('green');
+para3.classList.remove('fancy');
+para3.classList.add('green');
 
 // Lab 10: ensure link to css does not have ../styles.css
 // Ensure: first style is called  #blueParagraph not #blueText

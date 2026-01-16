@@ -1,5 +1,14 @@
 console.log("Forms");
 
+// console.log(`Some big long line of text that spans muliple lines that my linter might complain about`);
+// console.log(`Some big long line of text 
+//     that spans muliple lines that my 
+//     linter might complain about`);
+
+// console.log("Some other big long line of text \
+//     that spans muliple lines that my \
+//     linter might complain about");
+
 // access the DOM forms collection by index
 let formA  = document.forms[0];
 console.log(formA);

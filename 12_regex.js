@@ -5,7 +5,7 @@ console.log("REGEX......");
 let re = new RegExp("ab+c");
 
 // short-hand regex initialiser syntax
-let quickRe = /ab+c/ig; // add i before g to make it case insensitive
+let quickRe = /ab+c/; // add i before g to make it case insensitive
 
 let string = "xyz ABC abc aaaaBcc cccabbbca aabbbbc";
 let isMatch = quickRe.test(string);
@@ -13,10 +13,23 @@ let isMatch = quickRe.test(string);
 console.log(`Is there a match? ${isMatch}`);
 let matches = quickRe.exec(string);
 
-
 console.log(`Matched text is: ${matches[0]}`);
 console.log(`Substring matches: ${matches[1]}`);
 console.log(`Input string: ${matches.input}`);
+
+// short-hand regex initialiser syntax
+let quickReWithBrackets = /(ab+c)/; // add i before g to make it case insensitive
+
+// let string = "xyz ABC abc aaaaBcc cccabbbca aabbbbc";
+let isMatch2 = quickReWithBrackets.test(string);
+
+console.log(`Is there a match? ${isMatch2}`);
+let matches2 = quickReWithBrackets.exec(string);
+
+
+console.log(`Matched text is: ${matches2[0]}`);
+console.log(`Substring matches: ${matches2[1]}`);
+console.log(`Input string: ${matches2.input}`);
 
 // Match one 'd' followed by one or more b's followed by one 'd'
 // Remember matched b's and the following d

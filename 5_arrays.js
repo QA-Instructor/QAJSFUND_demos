@@ -33,6 +33,9 @@ console.log("JOIN...");
 let rainbowCast = classroom.join(`, `);
 console.log(rainbowCast);
 
+// let rainbowCast2 = classroom.join(` and `);
+// console.log(rainbowCast2);
+
 // sort: sort alphabetically as a string if no sort function is provided
 console.log("SORT...");
 classroom.sort();
@@ -42,6 +45,7 @@ for (let i = 0; i < classroom.length; i++) {
 }
 
 // console.log("SORT with a sort function...");
+// // arrow function / lambda function
 // classroom.sort((a , b) => a.length - b.length);
 // // console.log(classroom);
 // for (let i = 0; i < classroom.length; i++) {
@@ -106,12 +110,12 @@ console.log(isFreddyInClass ? "Freddy is in class" : "Freddy is absent");
 
 // extra loop types
 console.log("FOR...OF LOOP...");
+
 for (item of classroom){
     if (item === "Jane"){
         break;
     }
-    console.log(item);
-    
+    console.log(item);  
 }
 
 console.log("FOR EACH LOOP with an arrow function...");

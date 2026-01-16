@@ -1,21 +1,21 @@
-outputMessage(`Hello World!`); 
+// outputMessage(`Hello World!`); 
 
-// define a function (functions are 'hoisted' to the top of the file)
-function outputMessage(message){
-    console.log(`LOG: The outputMessage function is running`);
-    console.log(`LOG: ${message}`); 
-}
+// // define a function (functions are 'hoisted' to the top of the file)
+// function outputMessage(message){
+//     console.log(`LOG: The outputMessage function is running`);
+//     console.log(`LOG: ${message}`); 
+// }
 
-// call a function
-outputMessage(`Hello World!`); 
-outputMessage(`Bonjour le Monde!`);
+// // call a function
+// outputMessage(`Hello World!`); 
+// outputMessage(`Bonjour le Monde!`);
 
 // function sayHelloToSomeone(name) {
 //     alert(`Hi there ${name}!`);
 // }
 
-// // sayHelloToSomeone("Alice");
-// // sayHelloToSomeone("Bob");
+// sayHelloToSomeone("Alice");
+// sayHelloToSomeone("Bob");
 
 // function returnAGreetingToSomeone(name) {
 //     return `Hi there ${name}!`
@@ -27,6 +27,8 @@ outputMessage(`Bonjour le Monde!`);
 
 // console.log(greetingA);
 // console.log(greetingB.toUpperCase());
+
+// console.log(returnAGreetingToSomeone("Eric"));
 
 // // Arrow function examples
 // const noArgFnImpRet = () => `Hello World`;		// returns `Hello World` when called
@@ -47,17 +49,19 @@ outputMessage(`Bonjour le Monde!`);
 // noArgFnCodeBlk();
 
 // sglArgFn(`Hey!`);
+// let returnValue = sglArgFn(`Hey again!`);
+// console.log(returnValue);
 
 // let arrowB = multiArgFn(2, 5);
 // console.log(arrowB);
 
-// Default values
-function add(arg1, arg2, arg3=5) {
-    return(arg1 + arg2 + arg3);
-}
+// // Default values
+// function add(arg1, arg2, arg3=5) {
+//     return(arg1 + arg2 + arg3);
+// }
 
-console.log(add(1, 2, 3)); // 6
-console.log(add(2, 4)); // 11
+// console.log(add(1, 2, 3)); // 6
+// console.log(add(2, 4)); // 11
 
 // rest parameters
 // the rest / spread property (...) enables the destructuring of an array
@@ -76,9 +80,11 @@ console.log(add(2, 4)); // 11
 
 // console.log(mutiply(5, 1, 2, 5, 10));
 
+// console.log(mutiply(2, 1, 2, 3));
+
 // Function SCOPE
-// // Example 1
-// // if you do not use 'let' the variable has `global` scope
+// Example 1
+// if you do not use 'let' the variable has `global` scope
 
 // function testGlobal(){
 //    flag = true;
@@ -97,8 +103,8 @@ console.log(add(2, 4)); // 11
 // testGlobal();
 // =======================
 
-// // Example 2
-// // `flag` variable in first func is `global`, `flag` variable in second func uses `let` so is `local`
+// Example 2
+// `flag` variable in first func is `global`, `flag` variable in second func uses `let` so is `local`
 
 // function testLet(){
 //    flag = true;
@@ -121,7 +127,7 @@ console.log(add(2, 4)); // 11
 // scope 2
 
 // // Example 3
-// Explicitly defined at global level
+// // Explicitly defined at global level
 
 // let flag = true;
 

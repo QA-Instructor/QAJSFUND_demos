@@ -21,7 +21,7 @@ console.log(result2);
 let now = new Date();
 let greeting = "Good";
 
-if (now.getHours() > 17) {
+if (now.getHours() >= 16) {
     greeting += " evening.";
 }
 else {
@@ -70,6 +70,12 @@ while (i < 6) {
   i++;
 }
 console.log(text);
+
+// let isDark = true;
+
+// while (isDark){
+//     console.log("Keep the light on");
+// }
 
 // do while loop
 let ii = 7;
